@@ -32,6 +32,7 @@ const addOrganizationProfile=async (req, res) => {
             const newOrganizationProfile=await OrganizationProfileCompletion.create(req.body);
             res.send(newOrganizationProfile);
         }catch(err){
+            console.log(err)
             throw new Error(err);
         }
 }
